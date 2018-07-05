@@ -153,7 +153,7 @@ def team_names
   game_hash.map |side, side_hash|
     side_hash[:team_name]
   end
-  
+
 end
 
 
