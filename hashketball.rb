@@ -161,7 +161,7 @@ def player_numbers(team)
     game_hash[:home][:players].map { |k,v| v[:number] }
   else
     game_hash[:away][:players].map{ |k,v| v[:number] }
-  end    
+  end
 end
 
 
@@ -175,17 +175,17 @@ end
 
 def big_shoe_rebounds
   rebound_hash = {}
-  
+
   game_hash[:home][:players].each do |player, stats|
     rebound_hash[player] = game_hash[:home][:players][player]
   end
-  
+
   game_hash[:away][:players].each do |player, stats|
     rebound_hash[player] = game_hash[:home][:players][player]
   end
-  
+
   player_stats = rebound_hash.sort_by {|v| :rebounds}[0]
-  
+
   player_stats[1][:rebounds]
-  
+
 end
